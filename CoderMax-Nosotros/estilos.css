@@ -1,0 +1,346 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+	text-decoration: none;
+}
+
+/*------- SCROLL COLOR ---------*/
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: #010326;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+/*------ BARRA DE MANU -------*/
+nav{
+    position: fixed;
+    z-index: 100;
+    transition: 0.5s;
+}
+nav.hide{
+    transform: translateY(-100%);
+}
+.nav-menu{
+    background-color: #010326e5;
+    width: 100%;
+}
+.nav-menu .nav-menu2{
+    width: 96%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 26%;
+}
+.nav-menu .nav-menu2 ul{
+    display: flex;
+    list-style: none;
+}
+.nav-menu .nav-menu2 ul li{
+    font-size: 16px;
+    margin: 0px 15px;
+}
+.nav-menu2 ul li a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 3px;
+}
+.nav-menu2 ul li a::after{
+   content: '';
+   position: absolute;
+   background-color: #fff;
+   height: 2px;
+   width: 0;
+   left: 0;
+   bottom: -1px;
+   transition: 0.4s;
+}
+.nav-menu2 ul li a:hover::after{
+   width: 100%;
+}
+
+/*---- About us -----*/
+.contenedor1{
+    background-color: #010326;
+	width: 100%;
+	padding: 70px 0px 30px 0px;
+}
+.contenedor2{
+	width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 40px 0px 100px 0px;
+}
+.contenedor2 h1{
+    color: #fff;
+    font-size: 65px;
+    text-align: center;
+}
+.contenedor2 .coder{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+.contenedor h2{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+.contenedor-SN{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+.contenedor-SN .capa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30% 70% 64% 36% / 30% 51% 49% 70%;
+    background-color: #fff; 
+}
+.contenedor-SN .capa img{
+    width: 80%;
+}
+.contenido-textos{
+    display: flex;
+    align-items: center;
+}
+.contenido-textos h3{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.contenido-textos h3 span{
+    background: #fff;
+    color: #4d0686;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+}
+.contenido-textos h3 .asterisco{
+    margin-top: 2.5px;
+    margin-left: 2px;
+}
+.contenido-textos p{
+    color: #fff;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+/*------ Galeria ------*/
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-port{
+    width: 900px;
+    height: 400px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: #31188cb6;
+    transition: transform .9s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hover-galeria img{
+    width: 50px;
+}
+.hover-galeria p{
+    color: #fff;
+}
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/*----- Clients -------*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+
+.cards .card{
+    background: #31188C;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 #0a0e59d3;
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/*------- Our team ------*/
+.servicio-cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+.servicio-ind{
+    padding: 25px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.servicio-ind .img-logo{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 280px;
+}
+.servicio-ind img{
+    width: 100%;
+}
+.servicio-ind h3{
+    margin: 10px 0;
+    color: #010326;
+    font-size: 25px;
+}
+.servicio-ind p{
+    color: #010326;
+    text-align: justify;
+}
+
+/*------ FOOTER ------*/
+footer{
+    width: 100%;
+    background-color: #010326;
+}
+footer .main-footer{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+footer .main-footer .lista{
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display:  flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #7338F2;
+}
+footer .footer-logo{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+footer .footer-logo img{
+    width: 30%;
+}
+footer .footer-logo .correo p{
+    margin-top: 25px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+footer .footer-logo .correo h3{
+    margin-top: 8px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+footer .footer-logo .correo .correo-reg input{
+    margin-top: 10px;
+    padding: 4px;
+}
+footer .footer-logo .correo .correo-reg a{
+    color: #060940;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer .main-footer .lista .filas h4{
+    color: #fff;
+    font-size: 18px;
+}
+footer .main-footer .lista .filas ul{
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+footer .main-footer .lista .filas ul li{
+    margin: 18px 0px;
+}
+footer .main-footer .lista .filas ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+footer .main-footer .final{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+footer .main-footer .creadores p{
+    color: #fff;
+}
+footer .main-footer .copy{
+    color: #fff;
+    font-size: 11px;
+}
+footer .main-footer .links a i{
+    color: #fff;
+    font-size: 16px;
+    margin: 0px 16px;
+}

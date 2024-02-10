@@ -1,0 +1,270 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+	text-decoration: none;
+}
+
+/*------- SCROLL COLOR ---------*/
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: #010326;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+/*------ BARRA DE MANU -------*/
+nav{
+    position: fixed;
+    z-index: 100;
+    transition: 0.5s;
+}
+nav.hide{
+    transform: translateY(-100%);
+}
+.nav-menu{
+    background-color: #010326e5;
+    width: 100%;
+}
+.nav-menu .nav-menu2{
+    width: 96%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 26%;
+}
+.nav-menu .nav-menu2 ul{
+    display: flex;
+    list-style: none;
+}
+.nav-menu .nav-menu2 ul li{
+    font-size: 16px;
+    margin: 0px 15px;
+}
+.nav-menu2 ul li a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 3px;
+}
+.nav-menu2 ul li a::after{
+   content: '';
+   position: absolute;
+   background-color: #fff;
+   height: 2px;
+   width: 0;
+   left: 0;
+   bottom: -1px;
+   transition: 0.4s;
+}
+.nav-menu2 ul li a:hover::after{
+   width: 100%;
+}
+
+/*------ SECTION -------*/
+.contenedor1{
+    background-color: #010326;
+	width: 100%;
+	padding: 70px 0px 30px 0px;
+}
+.contenedor2{
+	width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+    margin-bottom: 150px;
+}
+
+.cajaCursos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+.tituloSeccion h2{
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+/*------- CARTAS ------*/
+.card {
+	background-color:#060940;
+	border-radius: 5px;
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+	display: flex;	
+	width: 100%;
+}
+
+.card h6 {
+    color: #fff;
+	opacity: 0.6;	
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.card  h2 {
+	letter-spacing: .1rem;
+	margin: 1rem 0;
+	color: #fff;
+}
+
+.left-column {
+    border-radius: 5px 0px 0pc 5px;
+    background-color: #602fca;
+	color: #fff;
+	padding: 2rem;
+	max-width: 10rem;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-column h2{
+	color: #fff;
+}
+
+.left-column i {
+	font-size: 8rem;
+}
+.left-column .logo-php{
+    font-size: 6rem;
+}
+.right-column {
+	padding: 30px;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.right-column h4,
+.right-column h5{
+    color: #fff;
+}
+.right-column h5{
+    margin-top: 40px;
+    letter-spacing: .1rem;
+}
+.right-column p{	
+	font-size: .9rem;
+	color: #fff;
+}
+.right-column a{
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #602fca;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 1.2rem;
+	padding: .8rem 1.5rem;
+	letter-spacing: .1rem;
+	align-self: flex-end;
+}
+
+
+
+/*------ FOOTER ------*/
+footer{
+    width: 100%;
+    background-color: #010326;
+}
+footer .main-footer{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+footer .main-footer .lista{
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display:  flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #7338F2;
+}
+footer .footer-logo{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+footer .footer-logo img{
+    width: 30%;
+}
+footer .footer-logo .correo p{
+    margin-top: 25px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+footer .footer-logo .correo h3{
+    margin-top: 8px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+footer .footer-logo .correo .correo-reg input{
+    margin-top: 10px;
+    padding: 4px;
+}
+footer .footer-logo .correo .correo-reg a{
+    color: #060940;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer .main-footer .lista .filas h4{
+    color: #fff;
+    font-size: 18px;
+}
+footer .main-footer .lista .filas ul{
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+footer .main-footer .lista .filas ul li{
+    margin: 18px 0px;
+}
+footer .main-footer .lista .filas ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+footer .main-footer .final{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+footer .main-footer .creadores p{
+    color: #fff;
+}
+footer .main-footer .copy{
+    color: #fff;
+    font-size: 11px;
+}
+footer .main-footer .links a i{
+    color: #fff;
+    font-size: 16px;
+    margin: 0px 16px;
+}
+
+/*----------*/
+.color{
+    color: #fff;
+}
+.fondo{
+    background-color: #7338F2;
+}
